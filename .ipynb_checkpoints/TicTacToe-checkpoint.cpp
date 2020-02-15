@@ -12,6 +12,16 @@ vector<vector<char>> CreateBoard() {
     return new_board;
 }
 
+void DisplayBoard(vector<vector<char> b1) {
+    unsigned int size = b1.size();
+    for(unsigned int i = 0; i < size; i++) {
+        for(unsigned int j = 0; j < size; j++) {
+            cout << board[i][j] << " ";
+        }
+        cout << endl;
+    }
+}
+
 int main() {
     CreateBoard();
     
