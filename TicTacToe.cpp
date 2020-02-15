@@ -12,6 +12,7 @@ vector<vector<char>> CreateBoard() {
     return new_board;
 }
 
+// Displays the board
 void DisplayBoard(vector<vector<char> b1) {
     unsigned int size = b1.size();
     for(unsigned int i = 0; i < size; i++) {
@@ -22,16 +23,12 @@ void DisplayBoard(vector<vector<char> b1) {
     }
 }
 
-vector<char> GetPlayerChoice() {
-    int x;
-    int y;
-    cout << "Please enter row number (1 - 3): ";
-    cin >> x;
-    x = x - 1;
-    cout << "Please enter column number (1 - 3): ";
-    cin >> y;
-    y = y - 1;
+// places player marker on board and return modified board
+vector<vector<int>> PlaceMarker(vector<vector<int>> board, vector<int> location, int player_marker) {
+    board[location[0]][location[1]] = player_marker;
+    return board;
 }
+
 
 int main() {
     CreateBoard();
