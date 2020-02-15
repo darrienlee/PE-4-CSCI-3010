@@ -23,6 +23,23 @@ void DisplayBoard(vector<vector<char> b1) {
     }
 }
 
+// gets player's row and column number that they wish to place their marker on
+vector<int> GetPlayerChoice() {
+    int i;
+    int j;
+    
+    cout << "Please enter row number (1 - 3): ";
+    cin >> i;
+    i = i - 1;
+    
+    cout << "Please enter column number (1 - 3): ";
+    cin >> j;
+    j = j - 1;
+    
+    vector<int> temp{i,j};
+    return temp;
+}
+
 // places player marker on board and return modified board
 vector<vector<int>> PlaceMarker(vector<vector<int>> board, vector<int> location, int player_marker) {
     board[location[0]][location[1]] = player_marker;
