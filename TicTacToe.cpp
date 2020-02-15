@@ -22,6 +22,17 @@ void DisplayBoard(vector<vector<char> b1) {
     }
 }
 
+vector<char> GetPlayerChoice() {
+    int i;
+    int j;
+    cout << "Please enter row number (1 - 3): ";
+    cin >> i;
+    i = i - 1;
+    cout << "Please enter column number (1 - 3): ";
+    cin >> j;
+    j = j - 1;
+}
+
 int main() {
     CreateBoard();
     
