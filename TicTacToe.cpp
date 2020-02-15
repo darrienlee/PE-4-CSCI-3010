@@ -40,6 +40,13 @@ vector<int> GetPlayerChoice() {
     return temp;
 }
 
+// places player marker on board and return modified board
+vector<vector<int>> PlaceMarker(vector<vector<int>> board, vector<int> location, int player_marker) {
+    board[location[0]][location[1]] = player_marker;
+    return board;
+}
+
+
 int main() {
     CreateBoard();
     
